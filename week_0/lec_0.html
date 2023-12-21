@@ -1,0 +1,222 @@
+<!--
+
+    *** Lec_0 ***
+    html and css
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            meow
+        </title>
+    </head>
+    <body>
+        im a cats
+    </body>
+</html>
+
+this is basically the most basic html page
+
+each <html> or <head> or ... is called a "tag"
+and all "attributes"in them like lang="en" alter their behaviour
+
+the tags and others form "elements"
+
+
+    *** document object model (DOM) ***
+
+a tree like structur that desctibes
+how diffrent parts of the html page relate
+(basically a family tree for html elements)
+
+
+    *** headings ***
+
+heading in different sizes from 1 "biggest" to 6
+<body>
+    <h1>
+        hahahahahaha
+    </h1>
+    <h2>
+        hahahahah
+    </h2>
+    im a cats
+</body>
+
+    *** lists ***
+
+# ordered list
+<body>
+    Ordred list
+    <ol>
+        <li>
+            first
+        </li>
+        <li>
+            second
+        </li>
+        <li>
+            third
+        </li>
+    </ol>
+</body>
+
+# unordered list
+
+<body>
+    Ordred list
+    <ul>
+        <li>
+            mew
+        </li>
+        <li>
+            meow
+        </li>
+        <li>
+            meooow
+        </li>
+    </ul>
+</body>
+
+    *** image ***
+
+<img src="filename" alt="text">
+
+alt = an alternative text in case the image
+can not be displayed
+
+# additional image attributes:
+
+width="300"    width is 300 pixels
+<img src="filename" alt="text" width="300">
+
+     *** link ***
+<a href="https://github.com/">github</a>
+
+    *** table ***
+
+the general shape is as follows
+
+<table>
+    <thead>
+        <th>
+        </th>
+    </thead>
+    <tbody>
+        <tr>    
+            <td>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+an example:
+
+<table>
+    <thead>
+        <th>
+            name
+        </th>
+        <th>
+            age
+        </th>
+        <th>
+            profession
+        </th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                john
+            </td>
+            <td>
+                60
+            </td>
+            <td>
+                veteran
+            </td>
+        </tr>
+        <tr>
+            <td>
+                parsa
+            </td>
+            <td>
+                18
+            </td>
+            <td>
+                sucker
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+    *** form/input ***
+<form>
+    <input type="text" placeholder="meow" name="catsound">
+    <input type="submit">
+</form>
+
+
+when getting password:
+<input type="password" placeholder="type password" name="name">
+
+radio button input:
+
+<div>
+    <input name="color" type="radio" value="red">red
+    <input name="color" type="radio" value="blue">blue
+    <input name="color" type="radio" value="green">green
+</div>
+
+    *** list input ***
+
+<form>
+    <input name="color" list="colors" placeholder="color">
+    <datalist id="colors">
+        <option value="red">
+        <option value="green">
+        <option value="blue">
+        <option value="yellow">
+    </datalist>
+    <input type="submit">
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            meow
+        </title>
+    </head>
+    <body>
+        <form>
+            <input name="color" list="colors" placeholder="color">
+            <datalist id="colors">
+                <option value="red">
+                <option value="green">
+                <option value="blue">
+                <option value="yellow">
+            </datalist>
+            <input type="submit">
+            
+        </form>
+        
+    </body>
+</html>
