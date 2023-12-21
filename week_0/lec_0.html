@@ -185,11 +185,65 @@ radio button input:
 
 
 
+    *** CSS ***
+
+#properties:
+
+style="color:green"
+<h1 style="color:green">hello</h1>
+
+style="text-align: center"
+<h1 style="color:green; text-align:center">hello</h1>
+        
+# you should seperate the properties with ;
+# the parent-child relationship exists with 
+# CSS properties as well
+
+<body style="color:green; text-align:center">
+    <h1>hello</h1>
+    hello
+</body>
+
+# this will have all the properties on both the heading and the text
+# direct styling is called "inline styling"
+# theres an alternative way:
+
+<style>
+    h1 {
+        color: blue;
+        text-align: center;
+        background-color: black;
+    }
+</style>
+<head>
+    <title>
+        meow
+    </title>
+</head>
+<body>
+    <h1>hello</h1>
+    hello
+</body>
+
+# all h1 tags will have the same style properties
 
 
 
+    *** CSS file ***
+
+link css to html file
+<link rel="stylesheet" href="lec_0.css">
+
+in CSS file just write whatever was in <style>
 
 
+    *** font ***
+
+h1 {
+    font-family: Arial;
+    font-size: 28px;
+    font-weight: bold;
+}
 
 
 
@@ -200,23 +254,14 @@ radio button input:
 
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="stylesheet" href="lec_0.css">
     <head>
         <title>
             meow
         </title>
     </head>
     <body>
-        <form>
-            <input name="color" list="colors" placeholder="color">
-            <datalist id="colors">
-                <option value="red">
-                <option value="green">
-                <option value="blue">
-                <option value="yellow">
-            </datalist>
-            <input type="submit">
-            
-        </form>
-        
+        <h1>hello</h1>
+        hello
     </body>
 </html>
