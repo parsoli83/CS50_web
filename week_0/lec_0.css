@@ -1,7 +1,10 @@
-h1 {
-    font-family: Arial;
-    font-size: 280px;
-    font-weight: bold;
-    color: blue;
-    text-align: center;
+ul {
+  font-size: 14px;
+  color: green;
 }
+
+h1 {
+  font: Arial;
+  font-size: 180pxs;
+  color: green;
+}/*# sourceMappingURL=lec_0.css.map */

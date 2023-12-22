@@ -245,6 +245,253 @@ h1 {
     font-weight: bold;
 }
 
+    *** border ***
+
+h1 {
+    border: 5px solid black;
+}
+
+for the nearby borders to collapse into one:
+
+h1,td,th,table {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+    *** CSS selectors ***
+
+style multiple elements
+h1,td,th {
+    border: 5px solid black;
+}
+
+decendants selectors:
+a b{
+
+}
+
+attribues selectors
+a[b]{
+
+}
+
+selector based on action
+
+button {
+
+}
+button:hover
+{
+
+}
+
+
+    *** padding and margin ***
+
+margin is outside
+padding is inside
+
+h1,td,th {
+    margin: 5px;
+    padding: 5px;
+}
+
+    *** id ***
+only for one element
+
+<style>
+    #red_banner {
+        color: red;
+    }
+</style>
+<h1 id="red_headline">CCCP</h1>
+
+    *** class ***
+
+can be used for multiple elements
+
+<style>
+    .super_power {
+        font-size: 140px;
+    }
+</style>
+<h1 class="super_power">CCCP</h1>
+<h1 class="super_power">USA</h1>
+
+    *** Specificity ***
+
+1 inline
+2 id
+3 class
+4 type
+
+    *** Responsive Design ***
+
+make sure the web page looks good on any device
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    *** media ***
+
+<style>
+    @media (max-width = 600px){
+        h1 {
+            color: red;
+        }
+    }
+    @media (min-width = 601px){
+        h1 {
+            color: blue;
+        }
+    }
+</style>
+
+    *** Flexbox ***
+
+    the whole container can wrap around elements
+  
+<style>
+    #container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+</style>
+<head>
+    <title>
+        meow
+    </title>
+</head>
+<body>
+    <div id="container">
+        <div>1  SOME  LONNNNNNNNNNNG TEXT</div>
+        <div>2  SOME  LONNNNNNNNNNNG TEXT</div>
+        <div>3  SOME  LONNNNNNNNNNNG TEXT</div>
+        <div>4  SOME  LONNNNNNNNNNNG TEXT</div>
+        <div>1  SOME  LONNNNNNNNNNNG TEXT</div>
+        <div>2  SOME  LONNNNNNNNNNNG TEXT</div>
+        <div>3  SOME  LONNNNNNNNNNNG TEXT</div>
+        <div>4  SOME  LONNNNNNNNNNNG TEXT</div>
+        
+    </div>
+    <h1>meow</h1>
+    welcome
+</body>
+
+
+    *** grid ***
+    a grid layout
+
+<style>
+    #grid {
+        background-color: green;
+        display: grid;
+        padding: 20px;
+        grid-row-gap : 10px;
+        grid-column-gap: 20px;
+        grid-template-columns: 20px,20px,auto;
+    }
+    .grid_item {
+        background-color: white;
+        font-size: 12px;
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+<head>
+    <title>
+        meow
+    </title>
+</head>
+<body>
+    <div id="grid">
+        <div class="grid_item">1</div>
+        <div class="grid_item">2</div>
+        <div class="grid_item">3</div>
+        <div class="grid_item">4</div>
+        <div class="grid_item">5</div>
+        <div class="grid_item">6</div>
+        <div class="grid_item">7</div>
+        <div class="grid_item">8</div>
+        <div class="grid_item">9</div>
+        <div class="grid_item">10</div>
+    </div>
+    <h1>meow</h1>
+    welcome
+</body>
+
+
+
+    *** Bootstrap ***
+    finally some good shit
+
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <body>
+        <form>
+            <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </body>  
+</html>
+
+
+
+    *** SASS ***
+
+    an expanditure to CSS
+    in which you can have variables and ...
+
+to define a variable:
+
+$ var_name = value;
+eg:
+
+$color: springgreen ;
+ul {
+    font-size: 14px;
+    color: $color;
+}
+
+h1 {
+    font-size: 180pxs;
+    color: $color;
+}
+
+but you cant directly use it
+you need to compile it first to CSS
+
+sass lec_0.scss:lec_0.css
+
+then work with the css file normally
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -255,13 +502,7 @@ h1 {
 <!DOCTYPE html>
 <html lang="en">
     <link rel="stylesheet" href="lec_0.css">
-    <head>
-        <title>
-            meow
-        </title>
-    </head>
     <body>
-        <h1>hello</h1>
-        hello
-    </body>
+        <h1>meow</h1>
+    </body>  
 </html>
