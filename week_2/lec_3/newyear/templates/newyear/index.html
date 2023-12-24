@@ -1,0 +1,18 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+    <link rel="stylesheet" href="newyear/styles.css">
+    <head>
+        newyear
+    </head>
+    <body>
+        <h1>
+        {% if n > 50 %}
+            the number {{n}} is bigger than 50
+        {% else %}
+            the number {{n}} is smaller than 50
+        {% endif %}
+        </h1>
+    </body>
+</html>
