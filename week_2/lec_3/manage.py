@@ -196,6 +196,65 @@ and in the html file:
 
 
 
+    *** layout.html ***
+
+in layout.html
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>tasks</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      </head>
+      <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+        {% block body%}
+        {% endblock %}
+    </body>
+</html>
+
+
+and in other html files eg add.html
+
+{% extends "tasks/layout.html" %}
+
+{% block body %}
+<ul>
+    <h1>
+        meow
+    </h1>
+</ul>
+{% endblock %}
+
+
+
+    *** name of URLs ***
+
+to reduce the risk of disruption in case of link change
+we use the name
+
+<a href="/tasks/add" >add new</a>
+
+to 
+
+<a href="{% url 'add' %}" >add new</a>
+
+    *** URL name collision ***
+
+when two different URLs in different places have the same name
+to solve it in the urls.py:
+
+app_name = "app_name"
+
+and when trying to call the link:
+<a href="{% url 'app_name:add' %}" >add new</a>
+
+
+
+
 
 
 
