@@ -252,6 +252,44 @@ app_name = "app_name"
 and when trying to call the link:
 <a href="{% url 'app_name:add' %}" >add new</a>
 
+    *** django forms ***
+
+in view.py:
+class new_email_form(forms.Form):
+     task = forms.CharField(label="email")
+
+and:
+def add(request):
+     return render(request, "tasks/add.html",{
+          "email": new_email_form()
+     })
+
+in the HTML:
+
+def add(request):
+     return render(request, "tasks/add.html",{
+          "email": new_email_form()
+     })
+
+     
+     both combined:
+
+def add(request):
+     if request.method=="POST":
+          form = new_email_form(request.POST)
+          # you got the form
+          if form.is_valid():
+               email = form.cleaned_data["email"]
+          else:
+               return render(request, "tasks/add.html",{
+                    "form": form,
+                    "errors":"Invalid email"
+               })
+     return render(request, "tasks/add.html",{
+          "email": new_email_form()
+     })
+
+
 
 
 
